@@ -12,17 +12,23 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
+    <div className="fixed w-full h-20  z-[100]">
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px:16">
         <Image src="/assets/navLogo.png" alt="/" width="120" height="50" />
 
-        <div>
+        <div className="text-white ">
           <ul className="hidden md:flex">
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b"> Home </li>
             </Link>
             <Link href="/" className="ml-10 text-sm uppercase hover:border-b">
               <li> About </li>
+            </Link>
+            <Link href="/" className="ml-10 text-sm uppercase hover:border-b">
+              <li> Skills </li>
+            </Link>
+            <Link href="/" className="ml-10 text-sm uppercase hover:border-b">
+              <li> Projects </li>
             </Link>
             <Link href="/" className="ml-10 text-sm uppercase hover:border-b">
               <li> Contact </li>
