@@ -14,7 +14,7 @@
     -webkit-text-stroke: 4px black;
   }
 
-  *::-webkit-media-controls-start-playback-button {
+  video::-webkit-media-controls-start-playback-button {
     display: none !important;
     -webkit-appearance: none;
   }
