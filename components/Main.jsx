@@ -15,7 +15,7 @@ const Main = () => {
       <div className="w-full h-screen bg-gray-200 flex justify-center items-center fixed cursor-pointer">
         <video
           src={cld.video("portfolio-videos/bg-final_xmztp7").toURL()}
-          autoPlay={true}
+          autoPlay
           muted
           loop
           className="absolute z-10 w-auto 
