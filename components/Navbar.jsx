@@ -21,8 +21,6 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-20  z-[100]">
       <div className="flex justify-center items-center w-full h-full px-4 2xl:px:16">
-        {/* <Image src="/assets/navLogo.png" alt="/" width="120" height="50" /> */}
-
         <div className="text-white drop-shadow-red z-100">
           <ul className="hidden md:flex tracking-widest">
             <Link href="/">
@@ -78,10 +76,12 @@ const Navbar = () => {
           <div>
             <div className="flex w-full items-center justify-between">
               <Image
+                style={{ width: "auto", height: "auto" }}
                 src="/assets/navLogo.png"
                 width="87"
                 height="35"
                 alt="Wally's Logo"
+                priority={true}
               />
               <div
                 onClick={handleNav}
