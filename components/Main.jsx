@@ -16,21 +16,28 @@ const Main = () => {
   const playerRef = useRef();
   function initialCheck() {
     playerRef.current.videoRef.current.play();
+    console.log("initialCheck", playerRef.current.videoRef);
   }
   function secondCheck() {
     playerRef.current.videoRef.current.pause();
+    console.log("secondCheck", playerRef.current.videoRef);
+  }
+  function handlePause() {
+    console.log("video has been paused!");
+    playerRef.current.videoRef.current.play();
   }
 
   return (
     <>
       <div className="w-full h-screen bg-gray-200 flex justify-center items-center fixed cursor-pointer">
         <AdvancedVideo
+          onPause={handlePause}
           onMouseOver={initialCheck}
           onMouseOut={secondCheck}
           ref={playerRef}
           cldVid={myVideo}
           loop
-          autoPlay
+          controls
           playsInline
           muted
         />
