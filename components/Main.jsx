@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedVideo } from "@cloudinary/react";
 import { CldVideoPlayer } from "next-cloudinary";
+import { useRef } from "react";
 
 const cld = new Cloudinary({
   cloud: {
@@ -12,11 +13,27 @@ const cld = new Cloudinary({
 
 const Main = () => {
   const myVideo = cld.video("/portfolio-videos/bg-final2_e1obdh");
+  const playerRef = useRef();
+  function initialCheck() {
+    playerRef.current.videoRef.current.play();
+  }
+  function secondCheck() {
+    playerRef.current.videoRef.current.pause();
+  }
 
   return (
     <>
       <div className="w-full h-screen bg-gray-200 flex justify-center items-center fixed cursor-pointer">
-        <AdvancedVideo cldVid={myVideo} loop autoPlay playsInline muted />
+        <AdvancedVideo
+          onMouseOver={initialCheck}
+          onMouseOut={secondCheck}
+          ref={playerRef}
+          cldVid={myVideo}
+          loop
+          autoPlay
+          playsInline
+          muted
+        />
         {/* <video
           src={}
           autoPlay
