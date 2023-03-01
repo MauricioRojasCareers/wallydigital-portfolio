@@ -1,10 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedVideo } from "@cloudinary/react";
-
-import videos from "../data/videos";
 
 const cld = new Cloudinary({
   cloud: {
@@ -13,10 +10,8 @@ const cld = new Cloudinary({
 });
 
 const Main = () => {
-  const [source, setSource] = useState("");
   const myVideo = cld.video("/portfolio-videos/bg-final");
 
-  useEffect(() => setSource(cld.video(videos[0].id).toURL()));
   return (
     <>
       <div className="w-full h-screen bg-gray-200 flex justify-center items-center fixed cursor-pointer">
@@ -59,5 +54,3 @@ min-w-full min-h-full max-w-none
 };
 
 export default Main;
-
-// {cld.video(videos[0].id).toURL()}
