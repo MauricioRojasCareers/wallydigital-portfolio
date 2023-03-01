@@ -29,18 +29,16 @@ const Main = () => {
 
   return (
     <>
-      <div className="w-full h-screen bg-gray-200 flex justify-center items-center fixed cursor-pointer">
+      <section className=" bg-gray-200 flex justify-center items-center cursor-pointer">
         <AdvancedVideo
           autoPlay
-          onSuspend={handlePause}
-          onMouseOver={initialCheck}
-          onMouseOut={secondCheck}
           ref={playerRef}
           cldVid={myVideo}
           loop
           playsInline
           muted
         />
+
         {/* <video
           src={}
           autoPlay
@@ -66,7 +64,11 @@ min-w-full min-h-full max-w-none
             priority={true}
           ></Image>
         </Link> */}
-      </div>
+      </section>
+      <section className="p-5">
+        <button onClick={initialCheck}>PLay </button>
+        <button onClick={secondCheck}>Pause </button>
+      </section>
     </>
   );
 };
