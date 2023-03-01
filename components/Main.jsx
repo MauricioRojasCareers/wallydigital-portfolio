@@ -11,16 +11,12 @@ const cld = new Cloudinary({
 });
 
 const Main = () => {
-  const myVideo = cld.video("/portfolio-videos/bg-final");
+  const myVideo = cld.video("/portfolio-videos/bg-final2_e1obdh");
 
   return (
     <>
       <div className="w-full h-screen bg-gray-200 flex justify-center items-center fixed cursor-pointer">
-        <CldVideoPlayer
-          width="1920"
-          height="1080"
-          src="portfolio-videos/bg-final"
-        />
+        <AdvancedVideo cldVid={myVideo} loop autoPlay muted />
         {/* <video
           src={}
           autoPlay
