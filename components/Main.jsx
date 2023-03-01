@@ -38,7 +38,6 @@ const Main = () => {
           ref={playerRef}
           cldVid={myVideo}
           loop
-          controls
           playsInline
           muted
         />
