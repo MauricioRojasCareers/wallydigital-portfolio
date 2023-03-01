@@ -16,7 +16,7 @@ const Main = () => {
   return (
     <>
       <div className="w-full h-screen bg-gray-200 flex justify-center items-center fixed cursor-pointer">
-        <AdvancedVideo cldVid={myVideo} loop autoPlay muted />
+        <AdvancedVideo cldVid={myVideo} loop autoPlay playsInline muted />
         {/* <video
           src={}
           autoPlay
