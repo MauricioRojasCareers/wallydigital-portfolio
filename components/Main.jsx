@@ -26,6 +26,9 @@ const Main = () => {
     console.log("video has been paused!");
     playerRef.current.videoRef.current.play();
   }
+  function handlePlay() {
+    playerRef.current.videoRef.current.play();
+  }
 
   return (
     <>
@@ -37,6 +40,7 @@ const Main = () => {
           loop
           playsInline
           muted
+          onScroll={handlePlay}
         />
 
         {/* <video
