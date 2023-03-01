@@ -31,6 +31,7 @@ const Main = () => {
     <>
       <div className="w-full h-screen bg-gray-200 flex justify-center items-center fixed cursor-pointer">
         <AdvancedVideo
+          autoPlay
           onPause={handlePause}
           onMouseOver={initialCheck}
           onMouseOut={secondCheck}
