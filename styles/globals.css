@@ -14,10 +14,6 @@
     -webkit-text-stroke: 4px black;
   }
 
-  video::-webkit-media-controls {
-    opacity: 0;
-  }
-
   h1,
   h2,
   h3,
