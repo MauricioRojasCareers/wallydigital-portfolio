@@ -1,29 +1,42 @@
 import React, { useRef } from "react";
 
-import { PlaybackControls } from "./PlaybackControls";
+import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 
 const Landing = () => {
   const playerRef = useRef();
-  function handleMouseIn() {
+  function handlePlay() {
     // playerRef.current.videoRef.play();
-    console.log(playerRef);
+    // console.log(playerRef);
     playerRef.current.play();
   }
-  function handleMouseOut() {
+  function handlePause() {
     playerRef.current.pause();
     // playerRef.current.videoRef.current.pause();
   }
+
+  const handlePlayingMessage = () => {
+    // setIsPlaying(true);
+    console.log("playing...");
+  };
+
+  const handlePauseMessage = () => {
+    // setIsPlaying(false);
+    console.log("not playing");
+  };
+
   return (
     <>
       <div className="bg-cover bg-center h-full w-full ">
         <video
+          id="videoId"
           autoPlay
           muted
           playsInline
           loop
           className="w-full h-full fixed top-0 left-0 object-cover z-0 "
           ref={playerRef}
-          onClick={handleMouseIn}
+          onPlay={handlePlayingMessage}
+          onPause={handlePauseMessage}
         >
           <source
             src="https://res.cloudinary.com/legacy-cloud/video/upload/c_crop,g_south_west,h_837,w_853,x_152,y_145/v1677759682/portfolio-videos/Website_footage_vnmkoj.mp4"
@@ -39,13 +52,20 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="fixed bottom-0 w-full h-80 flex items-center justify-center p-5 space-x-6">
-        <button className="px-4" onClick={handleMouseIn}>
-          Play{" "}
-        </button>
-        <button className="px-4" onClick={handleMouseOut}>
+      <div className="fixed bottom-0  w-full items-center justify-center  h-20 flex  p-5 space-x-6 text-white">
+        <AiFillPlayCircle
+          size={25}
+          className="md:hidden"
+          onClick={handlePlay}
+        />
+        <AiFillPauseCircle
+          onClick={handlePause}
+          size={25}
+          className="md:hidden"
+        ></AiFillPauseCircle>
+        {/* <button className="px-4" onClick={handleMouseOut}>
           Pause{" "}
-        </button>
+        </button> */}
       </div>
     </>
   );
