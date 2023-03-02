@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import Image from "next/image";
 
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 
@@ -44,10 +45,12 @@ const Landing = () => {
           />
         </video>
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
-          <img
+          <Image
             src="/assets/chromelogoshadow.png"
             alt="Overlay Image"
-            className="h-80"
+            width={500}
+            height={500}
+            size={50}
           />
         </div>
       </div>
