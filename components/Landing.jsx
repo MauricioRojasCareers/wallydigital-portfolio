@@ -19,6 +19,7 @@ const Landing = () => {
         <video
           autoPlay
           muted
+          playsInline
           loop
           className="w-full h-full absolute top-0 left-0 object-cover z-0"
           ref={playerRef}
