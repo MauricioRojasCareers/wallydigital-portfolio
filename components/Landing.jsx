@@ -23,6 +23,7 @@ const Landing = () => {
           loop
           className="w-full h-full fixed top-0 left-0 object-cover z-0 "
           ref={playerRef}
+          onClick={handleMouseIn}
         >
           <source
             src="https://res.cloudinary.com/legacy-cloud/video/upload/v1677462337/portfolio-videos/bg-final.mp4"
