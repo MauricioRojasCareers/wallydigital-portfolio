@@ -15,16 +15,33 @@ const Main = () => {
   const myVideo = cld.video("/portfolio-videos/bg-final2_e1obdh");
   const playerRef = useRef();
   function handleMouseIn() {
-    playerRef.current.videoRef.current.play();
+    playerRef.current.play();
+    console.log(playerRef);
   }
   function handleMouseOut() {
-    playerRef.current.videoRef.current.pause();
+    playerRef.current.pause();
+    // playerRef.current.videoRef.current.pause();
   }
 
   return (
     <>
-      <section className=" fixed bg-gray-200 flex justify-center items-center cursor-pointer">
-        <AdvancedVideo
+      <section className=" fixed bg-slate-300 h-screen w-screen">
+        <div
+          className=" w-screen h-screen
+        "
+        >
+          <video
+            src="https://res.cloudinary.com/legacy-cloud/video/upload/v1677462337/portfolio-videos/bg-final.mp4"
+            autoPlay
+            loop
+            ref={playerRef}
+            className="min-w-full min-h-full max-w-none
+            "
+          >
+            {" "}
+          </video>
+        </div>
+        {/* <AdvancedVideo
           // autoPlay
           ref={playerRef}
           cldVid={myVideo}
@@ -32,7 +49,7 @@ const Main = () => {
           playsInline
           muted
           controls
-        />
+        /> */}
 
         {/* <video
           src={}
@@ -60,7 +77,7 @@ min-w-full min-h-full max-w-none
           ></Image>
         </Link> */}
       </section>
-      <section className=" bg-slate-900  fixed">
+      <footer className=" bg-black fixed bottom-0">
         <div className="items-center flex mx-auto p-5 w-screen">
           <div className="space-x-2 p-5 w-screen">
             <button className="px-4" onClick={handleMouseIn}>
@@ -71,7 +88,7 @@ min-w-full min-h-full max-w-none
             </button>
           </div>
         </div>
-      </section>
+      </footer>
     </>
   );
 };
