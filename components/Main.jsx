@@ -14,33 +14,24 @@ const cld = new Cloudinary({
 const Main = () => {
   const myVideo = cld.video("/portfolio-videos/bg-final2_e1obdh");
   const playerRef = useRef();
-  function initialCheck() {
+  function handleMouseIn() {
     playerRef.current.videoRef.current.play();
-    console.log("initialCheck", playerRef.current.videoRef);
   }
-  function secondCheck() {
+  function handleMouseOut() {
     playerRef.current.videoRef.current.pause();
-    console.log("secondCheck", playerRef.current.videoRef);
-  }
-  function handlePause() {
-    console.log("video has been paused!");
-    playerRef.current.videoRef.current.play();
-  }
-  function handleTouchEnd() {
-    playerRef.current.videoRef.current.play();
-    console.log("touchEnd event!");
   }
 
   return (
-    <div onClick={initialCheck}>
-      <section className=" bg-gray-200 flex justify-center items-center cursor-pointer">
+    <>
+      <section className=" fixed bg-gray-200 flex justify-center items-center cursor-pointer">
         <AdvancedVideo
-          autoPlay
+          // autoPlay
           ref={playerRef}
           cldVid={myVideo}
-          loop
+          // loop
           playsInline
           muted
+          controls
         />
 
         {/* <video
@@ -69,11 +60,19 @@ min-w-full min-h-full max-w-none
           ></Image>
         </Link> */}
       </section>
-      <section className="p-5">
-        <button onClick={initialCheck}>PLay </button>
-        <button onClick={secondCheck}>Pause </button>
+      <section className=" bg-slate-900  fixed">
+        <div className="items-center flex mx-auto p-5 w-screen">
+          <div className="space-x-2 p-5 w-screen">
+            <button className="px-4" onClick={handleMouseIn}>
+              Play{" "}
+            </button>
+            <button className="px-4" onClick={handleMouseOut}>
+              Pause{" "}
+            </button>
+          </div>
+        </div>
       </section>
-    </div>
+    </>
   );
 };
 
