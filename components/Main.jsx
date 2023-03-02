@@ -30,7 +30,8 @@ const Main = () => {
     playerRef.current.videoRef.current.play();
   }
   useEffect(() => {
-    console.log("First renders");
+    playerRef.current.videoRef.current.play();
+    console.log("pressed play!");
   }, []);
   return (
     <>
