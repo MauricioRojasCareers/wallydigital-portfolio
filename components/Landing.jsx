@@ -31,7 +31,11 @@ const Landing = () => {
           />
         </video>
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
-          <img src="/assets/navLogo.png" alt="Overlay Image" className="h-80" />
+          <img
+            src="/assets/chromelogoshadow.png"
+            alt="Overlay Image"
+            className="h-80"
+          />
         </div>
       </div>
 
