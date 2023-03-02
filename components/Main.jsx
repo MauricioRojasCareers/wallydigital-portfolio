@@ -32,7 +32,7 @@ const Main = () => {
   }
 
   return (
-    <>
+    <div onClick={initialCheck}>
       <section className=" bg-gray-200 flex justify-center items-center cursor-pointer">
         <AdvancedVideo
           autoPlay
@@ -69,11 +69,11 @@ min-w-full min-h-full max-w-none
           ></Image>
         </Link> */}
       </section>
-      <section className="p-5" onTouchEnd={handleTouchEnd}>
+      <section className="p-5">
         <button onClick={initialCheck}>PLay </button>
         <button onClick={secondCheck}>Pause </button>
       </section>
-    </>
+    </div>
   );
 };
 
