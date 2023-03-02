@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Main from "@/components/Main";
 import Landing from "@/components/Landing";
+import SecondNavbar from "@/components/SecondNavbar";
 
 export default function Home() {
   return (
@@ -13,9 +14,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Main /> */}
-      <Landing></Landing>
+      <SecondNavbar></SecondNavbar>
 
-      <Navbar />
+      <Landing></Landing>
+      {/* <Navbar /> */}
     </>
   );
 }

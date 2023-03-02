@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
-import { FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
+import Image from "next/image";
+
 import {
   AiOutlineClose,
   AiOutlineMail,
@@ -9,17 +9,18 @@ import {
   AiFillInstagram,
   AiFillTwitterCircle,
 } from "react-icons/ai";
+
 import { BsFillPersonLinesFill, BsTwitch } from "react-icons/bs";
 import ReactTypingEffect from "react-typing-effect";
 
-const Navbar = () => {
+const SecondNavbar = () => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
   return (
-    <div className="fixed w-full h-20 z-50">
+    <div className="fixed w-full top-0 h-20 p-5 z-50">
       <div className="flex justify-center items-center w-full h-full px-4 2xl:px:16">
         <div className="text-white drop-shadow-red z-0">
           <ul className="hidden md:flex tracking-widest">
@@ -160,4 +161,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SecondNavbar;
