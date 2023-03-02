@@ -15,7 +15,7 @@ const Main = () => {
   const myVideo = cld.video("/portfolio-videos/bg-final2_e1obdh");
   const playerRef = useRef();
   function initialCheck() {
-    // playerRef.current.videoRef.current.play();
+    playerRef.current.videoRef.current.play();
     console.log("initialCheck", playerRef.current.videoRef);
   }
   function secondCheck() {
@@ -26,13 +26,11 @@ const Main = () => {
     console.log("video has been paused!");
     playerRef.current.videoRef.current.play();
   }
-  function handlePlay() {
+  function handleTouchEnd() {
     playerRef.current.videoRef.current.play();
+    console.log("touchEnd event!");
   }
-  useEffect(() => {
-    playerRef.current.videoRef.current.play();
-    console.log("pressed play!");
-  }, []);
+
   return (
     <>
       <section className=" bg-gray-200 flex justify-center items-center cursor-pointer">
@@ -43,6 +41,7 @@ const Main = () => {
           loop
           playsInline
           muted
+          onTouchEnd={handleTouchEnd}
         />
 
         {/* <video
