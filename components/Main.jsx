@@ -33,6 +33,8 @@ const Main = () => {
           <video
             src="https://res.cloudinary.com/legacy-cloud/video/upload/v1677462337/portfolio-videos/bg-final.mp4"
             autoPlay
+            muted
+            playsInline
             loop
             ref={playerRef}
             className="min-w-full min-h-full max-w-none
