@@ -15,13 +15,13 @@ const Landing = () => {
   }
   return (
     <>
-      <div className="bg-cover bg-center h-screen relative">
+      <div className="bg-cover bg-center h-full w-full ">
         <video
           autoPlay
           muted
           playsInline
           loop
-          className="w-full h-full absolute top-0 left-0 object-cover z-0"
+          className="w-full h-full fixed top-0 left-0 object-cover z-0 "
           ref={playerRef}
         >
           <source
@@ -29,19 +29,19 @@ const Landing = () => {
             type="video/mp4"
           />
         </video>
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-          <img src="/assets/navLogo.png" alt="Overlay Image" className="h-96" />
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
+          <img src="/assets/navLogo.png" alt="Overlay Image" className="h-80" />
         </div>
       </div>
 
-      <footer className="fixed bottom-0 w-full h-80 flex items-center justify-center p-5 space-x-6">
+      <div className="fixed bottom-0 w-full h-80 flex items-center justify-center p-5 space-x-6">
         <button className="px-4" onClick={handleMouseIn}>
           Play{" "}
         </button>
         <button className="px-4" onClick={handleMouseOut}>
           Pause{" "}
         </button>
-      </footer>
+      </div>
     </>
   );
 };
