@@ -26,7 +26,7 @@ const Landing = () => {
           onClick={handleMouseIn}
         >
           <source
-            src="https://res.cloudinary.com/legacy-cloud/video/upload/c_crop,g_south_west,h_650,y_221/v1677645853/portfolio-videos/bg-final2_e1obdh.mp4"
+            src="https://res.cloudinary.com/legacy-cloud/video/upload/c_crop,g_south_west,h_837,w_853,x_152,y_145/v1677759682/portfolio-videos/Website_footage_vnmkoj.mp4"
             type="video/mp4"
           />
         </video>
