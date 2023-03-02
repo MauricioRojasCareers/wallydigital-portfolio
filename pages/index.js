@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Main from "@/components/Main";
+import Landing from "@/components/Landing";
 
 export default function Home() {
   return (
@@ -11,9 +12,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Main />
+      {/* <Main /> */}
+      <Landing></Landing>
 
-      {/* <Navbar /> */}
+      <Navbar />
     </>
   );
 }
