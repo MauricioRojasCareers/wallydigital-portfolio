@@ -5,11 +5,12 @@ import { PlaybackControls } from "./PlaybackControls";
 const Landing = () => {
   const playerRef = useRef();
   function handleMouseIn() {
-    playerRef.current.videoRef.play();
+    // playerRef.current.videoRef.play();
     console.log(playerRef);
+    playerRef.current.play();
   }
   function handleMouseOut() {
-    playerRef.current.videoRef.pause();
+    playerRef.current.pause();
     // playerRef.current.videoRef.current.pause();
   }
   return (
