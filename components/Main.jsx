@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedVideo } from "@cloudinary/react";
 import { CldVideoPlayer } from "next-cloudinary";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const cld = new Cloudinary({
   cloud: {
