@@ -25,7 +25,7 @@ const Main = () => {
 
   return (
     <>
-      <section className=" fixed bg-slate-300 h-screen w-screen">
+      <section className=" fixed bg-slate-300 h-screen w-screen overscroll-none">
         <div
           className=" w-screen h-screen
         "
