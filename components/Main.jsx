@@ -41,7 +41,6 @@ const Main = () => {
           loop
           playsInline
           muted
-          onTouchEnd={handleTouchEnd}
         />
 
         {/* <video
@@ -70,7 +69,7 @@ min-w-full min-h-full max-w-none
           ></Image>
         </Link> */}
       </section>
-      <section className="p-5">
+      <section className="p-5" onTouchEnd={handleTouchEnd}>
         <button onClick={initialCheck}>PLay </button>
         <button onClick={secondCheck}>Pause </button>
       </section>
