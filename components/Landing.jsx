@@ -6,22 +6,17 @@ import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 const Landing = () => {
   const playerRef = useRef();
   function handlePlay() {
-    // playerRef.current.videoRef.play();
-    // console.log(playerRef);
     playerRef.current.play();
   }
   function handlePause() {
     playerRef.current.pause();
-    // playerRef.current.videoRef.current.pause();
   }
 
   const handlePlayingMessage = () => {
-    // setIsPlaying(true);
     console.log("playing...");
   };
 
   const handlePauseMessage = () => {
-    // setIsPlaying(false);
     console.log("not playing");
   };
 
@@ -66,9 +61,6 @@ const Landing = () => {
           size={25}
           className="md:hidden"
         ></AiFillPauseCircle>
-        {/* <button className="px-4" onClick={handleMouseOut}>
-          Pause{" "}
-        </button> */}
       </div>
     </>
   );

@@ -4,7 +4,6 @@ import Image from "next/image";
 
 import {
   AiOutlineClose,
-  AiOutlineMail,
   AiOutlineMenu,
   AiFillInstagram,
   AiFillTwitterCircle,
