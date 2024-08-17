@@ -4,7 +4,7 @@
 
 # - using Next pages router
 
-## Running on your own machine(git clone):
+## Running on your own machine (git clone) :
 
 First, install dependecies (run these commands from terminal in a new folder):
 
