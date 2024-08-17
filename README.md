@@ -8,8 +8,8 @@
 
 First, install dependecies (run these commands from terminal in a new folder):
 
-    - npm i
-    - npm run dev
+    npm i
+    npm run dev
 
 This will then start a server on [http://localhost:3000](http://localhost:3000)
 
