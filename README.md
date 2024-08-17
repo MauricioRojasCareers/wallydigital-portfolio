@@ -2,9 +2,17 @@
 
 ## NOTES:
 
-# - using Next pages router
+### - using Next pages router
 
-# - loading video from cloudinary
+### - loading video from cloudinary
+
+### - Has a sick media player in mobile responsive view!
+
+
+
+
+
+
 
 ## Running on your own machine (git clone) :
 
