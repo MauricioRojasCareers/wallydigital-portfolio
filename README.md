@@ -4,6 +4,8 @@
 
 # - using Next pages router
 
+# - loading video from cloudinary
+
 ## Running on your own machine (git clone) :
 
 First, install dependecies (run these commands from terminal in a new folder):
