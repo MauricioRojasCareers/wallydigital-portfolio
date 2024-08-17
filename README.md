@@ -6,18 +6,7 @@
 
 ### - loading video from cloudinary
 
-### - Has a sick media player in mobile responsive view!     
-      
-        
-
-         
-
-
-
-
-
-
-         
+### - Has a sick media player in mobile responsive view!\s\s\s
 
 ## Running on your own machine (git clone) :
 
